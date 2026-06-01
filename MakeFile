@@ -1,0 +1,16 @@
+CC = gcc
+CFLAGS = -Wall -I./include
+SRC = src/main.c src/livro.c src/menuLivros.c 
+OBJ = $(SRC:src/%.c=obj/%.o)
+EXEC = bin/projeto_estrutura_de_dados.exe
+
+all: $(EXEC)
+
+$(EXEC): $(OBJ)
+	$(CC) $(OBJ) -o $(EXEC)
+
+obj/%.o: src/%.c
+	$(CC) $(CFLAGS) -c $< -o $@
+
+clean:
+	del /Q obj\*.o bin\*.exe
