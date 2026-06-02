@@ -4,20 +4,17 @@
 
 #include "headers/estruturas.h"
 
-void inicializar_fila(Fila *f)
-{
+void inicializar_fila(Fila *f){
     f->frente = NULL;
     f->tras = NULL;
     f->tamanho = 0;
 }
 
-int fila_vazia(Fila *f)
-{
+int fila_vazia(Fila *f){
     return f->frente == NULL;
 }
 
-void enfileirar(Fila *f, const char *usuario)
-{
+void enfileirar(Fila *f, const char *usuario){
     NoFila *novo = (NoFila *)malloc(sizeof(NoFila));
     strcpy(novo->nome_usuario, usuario);
     novo->proximo = NULL;

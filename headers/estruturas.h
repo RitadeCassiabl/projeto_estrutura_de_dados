@@ -22,8 +22,7 @@ int fila_vazia(Fila *f);
 void enfileirar(Fila *f, const char *usuario);
 int desenfileirar(Fila *f, char *destino_nome);
 
-typedef struct NoPilha
-{
+typedef struct NoPilha{
     char titulo_livro[MAX_STR];
     struct NoPilha *proximo;
 } NoPilha;
