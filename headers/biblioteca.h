@@ -9,13 +9,13 @@ typedef struct {
     char titulo[MAX_STR];
     char autor[MAX_STR];
     int disponivel;
-    Fila fila_reserva; // Cada livro gerencia sua própria fila de espera
+    Fila fila_reserva;
 } Livro;
 
 typedef struct {
     Livro catalogo[MAX_LIVROS];
     int qtd_livros;
-    Pilha caixa_devolucao; // Caixa geral de devoluções da biblioteca
+    Pilha caixa_devolucao;
 } Biblioteca;
 
 void inicializar_biblioteca(Biblioteca* b);

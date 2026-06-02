@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-// Puxando da pasta header:
-#include "header/estruturas.h"
+
+#include "headers/estruturas.h"
 
 void inicializar_fila(Fila* f) {
     f->frente = NULL;

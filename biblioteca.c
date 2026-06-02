@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-// Puxando da pasta header:
-#include "header/biblioteca.h"
+#include "headers/biblioteca.h"
 
 void inicializar_biblioteca(Biblioteca* b) {
     b->qtd_livros = 0;

@@ -1,12 +1,11 @@
 #include <stdio.h>
 #include <string.h>
 // Puxando da pasta header:
-#include "header/biblioteca.h"
+#include "headers/biblioteca.h"
 
-// Função melhorada para ler strings com segurança
 void ler_string(char* destino, int tamanho) {
     fgets(destino, tamanho, stdin);
-    destino[strcspn(destino, "\n")] = '\0'; // Remove o ENTER do final
+    destino[strcspn(destino, "\n")] = '\0';
 }
 
 int main() {
@@ -31,10 +30,9 @@ int main() {
         printf("0. Sair\n");
         printf("Escolha uma opcao: ");
         
-        // Forma muito mais segura de ler números em C para evitar bugs do Windows
         fgets(entrada, sizeof(entrada), stdin);
         if (sscanf(entrada, "%d", &opcao) != 1) {
-            opcao = -1; // Se digitar letra sem querer, vira opção inválida
+            opcao = -1;
         }
 
         switch (opcao) {
@@ -64,7 +62,6 @@ int main() {
         }
     } while (opcao != 0);
 
-    // Isso vai impedir o executável de fechar sozinho caso você dê 2 cliques!
     printf("\nPressione ENTER para fechar a janela...");
     getchar();
 

@@ -3,7 +3,6 @@
 
 #define MAX_STR 50
 
-// --- Estrutura para a Fila (Controle de Reserva) ---
 typedef struct NoFila {
     char nome_usuario[MAX_STR];
     struct NoFila* proximo;
@@ -20,7 +19,6 @@ int fila_vazia(Fila* f);
 void enfileirar(Fila* f, const char* usuario);
 int desenfileirar(Fila* f, char* destino_nome);
 
-// --- Estrutura para a Pilha (Caixa de Devolução Expressa) ---
 typedef struct NoPilha {
     char titulo_livro[MAX_STR];
     struct NoPilha* proximo;
