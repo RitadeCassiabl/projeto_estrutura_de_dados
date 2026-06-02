@@ -1,6 +1,6 @@
 CC = gcc
 CFLAGS = -Wall -I./include
-SRC = src/main.c src/livro.c src/menuLivros.c 
+SRC = src/main.c src/livro.c src/menuLivros.c src/menuPrincipal.c
 OBJ = $(SRC:src/%.c=obj/%.o)
 EXEC = bin/projeto_estrutura_de_dados.exe
 
